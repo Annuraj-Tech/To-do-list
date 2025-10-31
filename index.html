@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>To-Do List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>My To-Do List</h1>
+  <h3 style="color:red">High Priority Tasks</h3><ul id="highList"></ul>
+  <h3 style="color:orange">Medium Priority Tasks</h3><ul id="mediumList"></ul>
+  <h3 style="color:green">Low Priority Tasks</h3><ul id="lowList"></ul>
+</div>
+
+<div id="formPopup" class="popup">
+  <div class="form-box">
+    <h2>Add New Task</h2>
+    <label>Task:</label>
+    <input id="taskInput" placeholder="Enter task">
+    <label>Category:</label>
+    <select id="category"><option>Work</option><option>Personal</option><option>School</option></select>
+    <label>Priority:</label>
+    <select id="priority"><option>High</option><option>Medium</option><option>Low</option></select>
+    <label>Deadline:</label>
+    <input id="deadline" type="datetime-local">
+    <button onclick="addTask()">Add</button>
+    <button class="close" onclick="toggleForm()">Cancel</button>
+  </div>
+</div>
+
+<button id="addBtn" onclick="toggleForm()">+</button>
+<script src="script.js"></script>
+</body>
+</html>
